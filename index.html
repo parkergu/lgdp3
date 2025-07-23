@@ -89,13 +89,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Imitation learning offers an effective paradigm for teaching robots, yet acquiring robust and generalizable policies for complex skills often requires a large number of human demonstrations. 3D Diffusion Policy (DP3) learns robust and generalizable skills with greater sample efficiency, requiring fewer demonstrations than prior methods. Although DP3 introduced an efficient architecture, the optimal 3D representation for control remains an open question.
+            Imitation learning offers an effective paradigm for teaching robots, yet acquiring robust policies for complex skills often requires numerous demonstrations. 3D Diffusion Policy (DP3), which operates on point cloud data, learns effective and generalizable skills with greater sample efficiency. A key limitation of DP3 is that it processes the entire visual observation equally, failing to distinguish task-relevant objects from irrelevant background, which ultimately limits its manipulation capabilities.
           </p>
           <p>
-            To enhance manipulation capabilities, we introduce 3D Visual Attention Diffusion Policy (3DVA), which enhances DP3 by incorporating a visual attention module. This allows the policy to selectively focus on the most pertinent regions of point cloud observations, leading to more effective representation learning. 
+            To address this limitation, we introduce 3D Visual Attention Diffusion Policy (3DVA), which leverages a visual attention module within its visual encoder to selectively focus on the most relevant regions of observations. The policy then generates actions conditioned on these 3D visual representations and the robot's proprioception, utilizing a diffusion-based backbone.
           </p>
           <p>
-            In our experiments across 8 simulation tasks, 3DVA surpasses the strong baseline (DP3) with a 5.88% relative improvement. Furthermore, on 3 real-world robot tasks, 3DVA demonstrates robust control, achieving an impressive 76% success rate with only 50 demonstrations per task. It also exhibits excellent generalization across variations in object appearance, lighting conditions, and instances. Our extensive evaluations highlight the critical role of visual attention in learning effective 3D representations for robotic manipulation.
+            In our experiments across 8 simulation tasks, 3DVA surpasses the strong baseline (DP3) with a 12.4% relative improvement. Furthermore, on 3 real-world robot tasks, 3DVA outperforms DP3, achieving an impressive average 76% success rate with only 50 demonstrations. It also exhibits excellent generalization across variations in object appearance, lighting conditions, and object instances. Our extensive evaluations highlight the critical role of visual attention in learning robust 3D representations for robotic manipulation.
           </p>
         </div>
       </div>
