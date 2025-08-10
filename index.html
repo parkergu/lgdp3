@@ -86,34 +86,7 @@
     <!--/ Dynamics Model+Control+Real-world Shape Control+Real-world Generalization-->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Overview</h2>
-        <div class="content has-text-centered">
-          <img src="static/images/system overview.png"
-               class="interpolation-image"
-               alt="Overview"
-               style="width: 60%; height: auto;"/>
-        </div>
 
-        <div class="content has-text-justified">
-          <p>
-            Overview of the proposed system. The proposed system comprises three key components: the data collection system, the 3D visuomotor policy learning method, and the real-world deployment. This integrated system enables the robot to execute autonomous skills in diverse real-world scenes.
-          </p>
-        </div>
-
-
-        <h2 class="title is-3">Policy Overview</h2>
-        <div class="content has-text-centered">
-          <img src="static/images/policy overview.png"
-               class="interpolation-image"
-               alt="Policy Overview"
-               style="width: 60%; height: auto;"/>
-        </div>
-
-        <div class="content has-text-justified">
-          <p>
-            Overview of policy learning. The policy learning comprises two key components: Perception and Decision. (a) Perception: 3DVA uses single-view point clouds to observe its environment. These point clouds are converted into compact 3D representations by a lightweight Conv1D encoder and a visual attention module. (b) Decision: 3DVA generates actions conditioning on these 3D representations and the robot’s states, utilizing a diffusion-based backbone.
-          </p>
-        </div>
 
         <h2 class="title is-3">Real-world Experiments</h2>
         <div class="content has-text-justified">
@@ -184,12 +157,6 @@
 
         <h3 class="title is-4">Appearance Generalization</h3>
 
-        <div class="content has-text-centered">
-          <img src="static/images/appearance generalization.png"
-               class="interpolation-image"
-               alt="appearance generalization"
-               style="width: 30%; height: auto;"/>
-        </div>
         <p>
           Algorithms are trained with the red block only and evaluated on 4 unseen colored blocks.
         </p>
@@ -325,12 +292,6 @@
 
         <h3 class="title is-4">Lighting Robustness</h3>
         
-        <div class="content has-text-centered">
-          <img src="static/images/lighting generalization.png"
-               class="interpolation-image"
-               alt="lighting generalization"
-               style="width: 40%; height: auto;"/>
-        </div>
         <p>
           Algorithms are trained with the normal lighting condition only and evaluated on 4 unseen lighting conditions.
         </p>
@@ -466,13 +427,7 @@
 
 
         <h3 class="title is-4">Instance Generalization</h3>
-
-        <div class="content has-text-centered">
-          <img src="static/images/instance generalization.png"
-               class="interpolation-image"
-               alt="instance generalization"
-               style="width: 40%; height: auto;"/>
-        </div>
+        
         <p>
           Algorithms are trained with one kind of cup only and evaluated on 4 unseen cups.
         </p>
