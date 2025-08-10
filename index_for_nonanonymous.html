@@ -83,6 +83,29 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Imitation learning offers an effective paradigm for teaching robots, yet acquiring robust policies for complex skills often requires numerous demonstrations. 3D Diffusion Policy (DP3), which operates on point cloud data, learns effective and generalizable skills with greater sample efficiency. A key limitation of DP3 is that it processes the entire visual observation equally, failing to distinguish task-relevant objects from irrelevant background, which ultimately limits its manipulation capabilities.
+          </p>
+          <p>
+            To address this limitation, we introduce 3D Visual Attention Diffusion Policy (3DVA), which leverages a visual attention module within its visual encoder to selectively focus on the most relevant regions of observations. The policy then generates actions conditioned on these 3D visual representations and the robot's proprioception, utilizing a diffusion-based backbone.
+          </p>
+          <p>
+            In our experiments across 8 simulation tasks, 3DVA surpasses the strong baseline (DP3) with a 12.4% relative improvement. Furthermore, on 3 real-world robot tasks, 3DVA outperforms DP3, achieving an impressive average 76% success rate with only 50 demonstrations. It also exhibits excellent generalization across variations in object appearance, lighting conditions, and object instances. Our extensive evaluations highlight the critical role of visual attention in learning robust 3D representations for robotic manipulation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
     <!--/ Dynamics Model+Control+Real-world Shape Control+Real-world Generalization-->
     <div class="columns is-centered">
       <div class="column is-full-width">
