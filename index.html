@@ -2,6 +2,7 @@
 <!--声明了文档类型-->
 <html>
 <head>
+  <!--包含了页面的元数据、引用的样式表（CSS）和脚本（JavaScript）-->
   <meta charset="utf-8">
   <!--设置字符编码为 UTF-8-->
   <meta name="description"
@@ -11,7 +12,7 @@
   <!--用于搜索引擎优化-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--让页面在移动设备上自适应宽度，提升响应式体验-->
-  <title>3DVA</title>  
+  <title>LGDP3</title>  
   <!--定义浏览器标签页显示的标题-->
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -49,18 +50,30 @@
 
 
 <body>
-
 <section class="hero">
-  <!-- 标题+作者 -->
+  <!--全宽的横幅（或称为“hero”）区域，通常放置在页面的顶部，用来突出显示重要内容，比如网站标题、标语或关键图像。-->
   <div class="hero-body">
+    <!--位于 <section class="hero"> 内，承载该横幅的主体内容（标题、按钮、图片等）。-->
     <div class="container is-max-desktop">
+      <!--container:创建一个水平居中、有固定最大宽度的容器。-->
+      <!--is-max-desktop:创建一个水平居中的内容区域，其最大宽度被限制为 960px（加上两边的内边距）。-->
       <div class="columns is-centered">
+      <!--columns:创建一个列（columns）的容器。-->
+      <!--is-centered:内部的所有列（column 元素）在容器内水平居中。-->
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">3DVA: Learning Robust 3D Diffusion Policies via Visual Attention for Robotic Manipulation</h1>
+          <!--定义了这个 div 元素是一个“列”-->
+          <!--将该元素内部的所有文本（以及其他行内元素）水平居中-->
+          <h1 class="title is-1 publication-title">LGDP3: Local Geometry-Aware 3D Diffusion Policy for Robust Robotic Manipulation</h1>
+          <!--h1:HTML 中最高级别的标题标签-->
+          <!--title:设定标题的通用样式。is-1:设置为最大号字体。publication-title:进一步调整标题的样式。-->
           <div class="column has-text-centered">
+          <!--定义了这个 div 元素是一个“列”-->
+          <!--将该元素内部的所有文本（以及其他行内元素）水平居中-->
             <div class="publication-links">
+            <!--存放该研究出版物相关的所有重要链接-->
               <!-- Code Link. -->
               <span class="link-block">
+              <!--创建一个默认是内联的 span 容器-->
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark" disabled>
                   <span class="icon">
@@ -83,15 +96,12 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!--/ Dynamics Model+Control+Real-world Shape Control+Real-world Generalization-->
     <div class="columns is-centered">
       <div class="column is-full-width">
-
-        <p class="has-text-centered">
-            We present real-world experiments in this web.
+        <h2 class="title is-3">Abstract</h2>
+        <p>
+            Visual imitation learning has made significant progress in the field of robotic manipulation, but existing methods often fail at tasks requiring precise physical interactions due to a lack of understanding of fine-grained geometric features on object surfaces. We propose LGDP3, a novel visuomotor policy that addresses this by integrating a dedicated local geometric feature extraction module into a 3D diffusion framework. Our perception module analyzes point cloud neighborhoods from a single depth camera to learn critical geometric details (e.g., edges, corners, and planes), which then condition a diffusion model to generate precise and robust action sequences. In comprehensive evaluations across 8 simulated and 2 real-world tasks, LGDP3 consistently outperformed the strong baseline (DP3), achieving a 5.7% relative improvement in simulation and 23.5% in the real world. The policy also demonstrated excellent generalization to variations in object position, appearance, and lighting conditions. These extensive evaluation results highlight the critical role of local geometric feature extraction in learning robust 3D representations for robotic manipulation.
         </p>
-        <br>
-        <br>
 
         <h2 class="title is-3">Real-world Experiments</h2>
         <div class="content has-text-justified">
