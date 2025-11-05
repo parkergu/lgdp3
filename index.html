@@ -136,7 +136,7 @@
         <h2 class="title is-3 has-text-centered">Method Overview</h2>
         <img src="static/images/overview.png" style="width: 80%; display: block; margin-left: auto; margin-right: auto;">
         <p class="has-text-centered">
-          Overview of LGDP3. 
+          Overview of LGDP3
         </p>
         <p class="has-text-justified">
           Above: (a) The policy is trained end-to-end using expert demonstrations. (b) During evaluation, the trained policy performs closed-loop control using environmental observations. 
@@ -144,7 +144,7 @@
         </p>
         <img src="static/images/local geometric feature extraction.png" style="width: 60%; display: block; margin-left: auto; margin-right: auto; margin-top: 2rem;">
         <p class="has-text-centered">
-          Architecture of the Local Geometric Feature Extraction Module. 
+          Architecture of the Local Geometric Feature Extraction Module
         </p>
         <p class="has-text-justified">
           This diagram illustrates the data flow for an input of N=1024 points with C=256 features. The Group block uses K-Nearest Neighbors (KNN) to find K=32 neighbors (a value determined by ablation), resulting in a (1024, 32, 256) tensor. The Pre Feature Extraction block then applies a shared module of Conv1D-ReLU layer. An Aggregate block performs Max Pooling to achieve permutation invariance and reduce the tensor to (1024, 256). Finally, the Post Feature Extraction block applies another Conv1D-ReLU layer to produce the final feature representation.
