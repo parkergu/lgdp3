@@ -157,6 +157,9 @@
         <p class="has-text-centered" style="font-size: 1.1rem; margin-top: 0.5rem;">
           <strong>Can a local geometric feature extraction module capture the fine-grained details necessary to enhance 3D-based diffusion policies for high-precision robotic manipulation?</strong>
         </p>
+        <p class="has-text-centered" style="font-size: 1.1rem; margin-top: 0.5rem;">
+          <strong>Is it effective to directly apply standard PointNet++ to 3D-based diffusion policies? How can we design an effective local geometric feature extraction module for 3D-based diffusion policies?</strong>
+        </p>
       </div>
     </div>
   </div>
@@ -173,7 +176,7 @@
         </p>
         <p class="has-text-justified">
           Above: (a) The policy is trained end-to-end using expert demonstrations. (b) During evaluation, the trained policy performs closed-loop control using environmental observations. 
-          Below: The Perception module extracts a 3D Representation from an input point cloud using an encoder featuring Conv1D layers and our core Local Geometric Feature Extraction module. Simultaneously, it encodes the robot state into a Proprioception Representation via an MLP. The Decision module, a diffusion-based backbone, conditions on these fused representations to generate the final action sequence through a denoising process.
+          Below: The Perception module extracts a 3D Representation from an input point cloud using an encoder featuring Conv1D layers and our core Local Geometric Feature Extraction module. Simultaneously, it encodes the robot state into a Proprioception Representation via MLP. The Decision module, a diffusion-based backbone, conditions on these fused representations to generate the final action sequence through a denoising process.
         </p>
         <img src="static/images/local geometric feature extraction.png" style="width: 60%; display: block; margin-left: auto; margin-right: auto; margin-top: 2rem;">
         <p class="has-text-centered">
