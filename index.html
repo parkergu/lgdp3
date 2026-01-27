@@ -104,7 +104,7 @@
       <!--定义一个实际存放内容的列,占据其父容器（columns）的全部可用宽度-->
         <h2 class="title is-3 has-text-centered">Abstract</h2>
           <p class="has-text-justified">
-              Visual imitation learning has made significant progress in the field of robotic manipulation, but existing methods often fail in precision-critical tasks due to insufficient fine-grained geometric understanding. We propose LGDP3, a novel visuomotor policy that addresses this by integrating a dedicated local geometric feature extraction module into a 3D diffusion framework. Our perception module analyzes point cloud neighborhoods from a single depth camera to learn critical geometric details (e.g., edges, corners, and planes). Distinct from hierarchical architectures like PointNet++ that rely on aggressive downsampling, our non-hierarchical design explicitly preserves high-frequency spatial details often lost during set abstraction. By conditioning the decision-making process on this enriched geometric representation, our policy generates more precise and robust actions. In comprehensive evaluations across 8 simulation and 2 real-world tasks representative of industrial automation, LGDP3 consistently outperformed the strong baseline (DP3), achieving a 5.5\% relative improvement in simulation and 23.5% in the real world. The policy also demonstrated significant generalization to variations in object position, appearance, and lighting conditions. These extensive evaluation results highlight the critical role of local geometric feature extraction in learning robust 3D representations for precise and practical robotic manipulation.
+              Visual imitation learning has made significant progress in the field of robotic manipulation, but existing methods often fail in precision-critical tasks due to insufficient fine-grained geometric understanding. We propose LGDP3, a novel visuomotor policy that addresses this by integrating a dedicated local geometric feature extraction module into a 3D diffusion framework. Our perception module analyzes point cloud neighborhoods from a single depth camera to learn critical geometric details (e.g., edges, corners, and planes). Distinct from hierarchical architectures like PointNet++ that rely on aggressive downsampling, our non-hierarchical design explicitly preserves high-frequency spatial details often lost during set abstraction. By conditioning the decision-making process on this enriched geometric representation, our policy generates more precise and robust actions. In comprehensive evaluations across 8 simulation and 2 real-world tasks representative of industrial automation, LGDP3 consistently outperformed the strong baseline (DP3), achieving a 5.5% relative improvement in simulation and 23.5% in the real world. The policy also demonstrated significant generalization to variations in object position, appearance, and lighting conditions. These extensive evaluation results highlight the critical role of local geometric feature extraction in learning robust 3D representations for precise and practical robotic manipulation.
           </p>
         </div>
       </div>
@@ -138,11 +138,20 @@
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered">Motivation</h2>
         <p class="has-text-justified">
-          Existing 3D perception-based diffusion policies do not consider extracting fine-grained local geometric features (e.g., edges, corners, and planes). This perception gap, a lack of a detailed understanding of object geometry, leads to policy failures when precise physical interactions are required.
+          Existing 3D perception-based diffusion policies do not consider extracting fine-grained local geometric features. This results in policy failures when tasks demand high-precision spatial alignment, such as Hammer Pin and Assemble Battery.  
         </p>
-        <p class="has-text-justified"></p>
-          To address this limitation, we introduce LGDP3, a novel visuomotor policy that explicitly extracts local geometric features from 3D visual data.
-        <p class="has-text-justified"></p>
+        <div class="columns is-centered" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          <div class="column is-half has-text-centered">
+            <img src="static/images/dp_fail_pin_x2.gif" style="width: 90%;">
+            <p><strong>Hammer Pin</strong></p>
+            <p>Fail in Hammering</p>
+          </div>
+          <div class="column is-half has-text-centered">
+            <img src="static/images/dp_fail_box_x2.gif" style="width: 90%;">
+            <p><strong>Assemble Battery</strong></p>
+            <p>Fail in Assembling</p>
+          </div>
+        </div>
         <img src="static/images/motivation.png" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
         <p class="has-text-justified">
            (a) Without Fine-grained 3D-Awareness Perception: Baseline methods lacking local geometric understanding fail at tasks requiring precise physical interactions. (b) With Fine-grained 3D-Awareness Perception: Our method (LGDP3) successfully extracts local geometric details, enabling it to complete these precise manipulation tasks.
