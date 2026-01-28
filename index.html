@@ -182,8 +182,9 @@
         <p class="has-text-centered">
           <strong>Architecture of our Local Geometric Feature Extraction Module</strong>
         </p>
-        <p class="has-text-justified">
+        <p class="has-text-justified" style="margin-bottom: 0.5rem;">
           We design a lightweight, non-hierarchical local geometric feature extraction module. Our ablation studies demonstrate that this design is more suitable for 3D-based Diffusion Policy than the standard PointNet++.
+        </p>
         <p class="has-text-justified">
           This diagram illustrates the data flow for an input of N=1024 points with C=256 features. The Group block uses K-Nearest Neighbors (KNN) to find K=32 neighbors (a value determined by ablation), resulting in a (1024, 32, 256) tensor. The Pre Feature Extraction block then applies a shared module of Conv1D-ReLU layer. An Aggregate block performs Max Pooling to achieve permutation invariance and reduce the tensor to (1024, 256). Finally, the Post Feature Extraction block applies another Conv1D-ReLU layer to produce the final feature representation.
         </p>
